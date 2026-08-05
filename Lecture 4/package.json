@@ -1,0 +1,13 @@
+{
+  "name": "bca-b-3rd-sem",
+  "version": "1.0.0",
+  "description": "This is back-end web development class",
+  "license": "ISC",
+  "author": "Mohd Shadav",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+    
+  }
+}
