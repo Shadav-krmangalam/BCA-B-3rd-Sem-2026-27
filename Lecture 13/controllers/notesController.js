@@ -1,12 +1,17 @@
 const {notes} = require("../models/data")
 const getNotes = (req,res)=>{
    
-    res.status(200).send(notes)
+    try{
+        res.status(200).send(notes)
+    }catch(err){
+        res.status(500).send(err)
+    }
 }
 
 const getNoteByID = (req,res)=>{
     
-     let {id}= req.params
+   try{
+      let {id}= req.params
      
 
     let note = notes.find(note=>note.id === Number(id))
@@ -16,6 +21,9 @@ const getNoteByID = (req,res)=>{
     }
 
     res.status(200).send(note)
+   }catch(err){
+    res.status(500).send(err)
+   }
 }
 
 const createNote = (req,res)=>{
