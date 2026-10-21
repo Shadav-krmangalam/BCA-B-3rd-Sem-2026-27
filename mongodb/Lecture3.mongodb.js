@@ -90,18 +90,19 @@ use("BCA")
 // ])
 
 
-db.students.aggregate([
+// db.students.aggregate([
 
-    {
-        $match:{
-            "city":"Delhi"
-        }
+//     {
+//         $match:{
+//             "city":"Delhi"
+//         }
 
-    },
-    {$group:{
-        _id:"$city",
-        totalSt:{
-            $sum:1
-        }
-    }}
-])
+//     },
+//     {$group:{
+//         _id:"$city",
+//         totalSt:{
+//             $sum:1
+//         }
+//     }}
+// ])
+
