@@ -120,14 +120,15 @@ use("BCA")
 
 
 // Display name and total marks, where total marks are calculated from Math, DBMS, and Web marks.
-db.students.aggregate([
+// db.students.aggregate([
 
-    {
-        $project:{
-            name:1,
-            totalMarks:{
-                $add:["$marks.math","$marks.dbms","$marks.web"]
-            }
-        }
-    }
-])
+//     {
+//         $project:{
+//             name:1,
+//             totalMarks:{
+//                 $add:["$marks.math","$marks.dbms","$marks.web"]
+//             }
+//         }
+//     }
+// ])
+
