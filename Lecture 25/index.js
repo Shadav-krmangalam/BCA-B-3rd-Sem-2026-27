@@ -5,6 +5,7 @@ const morgan = require("morgan")
 const db = require("./config/db")
 db();
 const notesRoutes = require("./routes/notesRoutes")
+const userRoutes = require("./routes/userRoutes")
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 app.use(morgan("combined"))
@@ -14,6 +15,7 @@ app.get("/",(req,res)=>{
 })
 
 app.use("/api",notesRoutes)
+app.use("/user",userRoutes)
 
 
 app.listen(3000,()=>{
